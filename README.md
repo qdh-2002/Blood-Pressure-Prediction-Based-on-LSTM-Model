@@ -1,4 +1,6 @@
 # Blood-Pressure-Prediction-Based-on-LSTM-Model
+[![license](https://img.shields.io/github/license/:user/:repo.svg)](LICENSE)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
 This repository implements a pipeline using Long Short-Term Memory (LSTM) networks to predict Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) from Photoplethysmogram (PPG) and Electrocardiogram (ECG) signals. By leveraging time-series data from these two physiological signals, this model aims to provide accurate blood pressure estimations without the need for traditional cuff-based measurements.
 

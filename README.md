@@ -32,6 +32,13 @@ The model is constructed to predict both Systolic Blood Pressure (SBP) and Diast
 
         
 ## Usage
+<p align="center">
+  <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/results_dbp.png" alt="Description of the image" width="500">
+</p>
+
+<p align="center">
+  <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/results_sbp.png" alt="Description of the image" width="500">
+</p>
 
 ## Install
 

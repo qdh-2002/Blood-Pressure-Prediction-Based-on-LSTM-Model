@@ -31,7 +31,16 @@ LSTM's ability to avoid vanishing gradient problems, which are common in standar
 The model is constructed to predict both Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) simultaneously using two parallel output layers. This allows for comprehensive monitoring and estimation of the user's blood pressure.
 
         
-## Usage
+## Details
+### Filtering
+Biological artifacts in physiological signals, such as ECG and PPG, can arise from muscle movements, electrical interference, or poor electrode contact. Additionally, external electromagnetic interference from power lines or electronic devices contributes to environmental noise in recordings. Motion artifacts are also prevalent, especially in wearable devices, where the subject's movement can distort the signals. Furthermore, equipment errors, including calibration issues, sensor malfunctions, or software bugs, can lead to inaccuracies in the recorded data, underscoring the need for effective artifact removal techniques.
+
+<p align="center">
+  <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/filter.png" alt="Description of the image" width="500">
+</p>
+
+A random Gaussian noise was introduced into the signal to simulate real-world noise. In order to tackle with this noise, a fourth-order elliptic bandpass filter was used, with a passband set from 0.5 to 5 Hz. The figure shows the comparison between the signal with noise and the filtered signal.
+
 <p align="center">
   <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/results_dbp.png" alt="Description of the image" width="500">
 </p>

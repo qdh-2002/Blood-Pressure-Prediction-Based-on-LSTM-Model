@@ -3,7 +3,7 @@
 This repository implements a pipeline using Long Short-Term Memory (LSTM) networks to predict Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) from Photoplethysmogram (PPG) and Electrocardiogram (ECG) signals. By leveraging time-series data from these two physiological signals, this model aims to provide accurate blood pressure estimations without the need for traditional cuff-based measurements.
 
 <p align="center">
-  <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/model.png" alt="Description of the image" width="500">
+  <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/model.png" alt="Description of the image" width="450">
 </p>
 
 ## Introduction
@@ -32,6 +32,12 @@ The model is constructed to predict both Systolic Blood Pressure (SBP) and Diast
 
         
 ## Details
+### Dataset
+
+The dataset used in this project is sourced from [this Kaggle repository](https://www.kaggle.com/code/stephenmugisha/bloodpressure-analysis). 
+
+PPG signals, ECG signals and BP signals all have a sampling rate of Fs = 125Hz, where PPG signals were obtained using fingertip, ECG signals coming from electrocardiogram from channel II, and BP signals are invasive arterial blood pressure.
+
 ### Filtering
 Biological artifacts in physiological signals, such as ECG and PPG, can arise from muscle movements, electrical interference, or poor electrode contact. Additionally, external electromagnetic interference from power lines or electronic devices contributes to environmental noise in recordings. Motion artifacts are also prevalent, especially in wearable devices, where the subject's movement can distort the signals. Furthermore, equipment errors, including calibration issues, sensor malfunctions, or software bugs, can lead to inaccuracies in the recorded data, underscoring the need for effective artifact removal techniques.
 
@@ -41,6 +47,9 @@ Biological artifacts in physiological signals, such as ECG and PPG, can arise fr
 
 A random Gaussian noise was introduced into the signal to simulate real-world noise. In order to tackle with this noise, a fourth-order elliptic bandpass filter was used, with a passband set from 0.5 to 5 Hz. The figure shows the comparison between the signal with noise and the filtered signal.
 
+### Results
+For DBP, the Root Mean Squared Error (RMSE) is 5.92. For SBP, RMSE is 9.38. Note that this model was trained on 256488 samples (125 timepoints each sample).
+
 <p align="center">
   <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/results_dbp.png" alt="Description of the image" width="500">
 </p>
@@ -48,8 +57,6 @@ A random Gaussian noise was introduced into the signal to simulate real-world no
 <p align="center">
   <img src="https://github.com/qdh-2002/Blood-Pressure-Prediction-Based-on-LSTM-Model/blob/main/img/results_sbp.png" alt="Description of the image" width="500">
 </p>
-
-## Install
 
 
 
